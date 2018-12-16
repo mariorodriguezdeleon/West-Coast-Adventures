@@ -1,0 +1,299 @@
+			/*West Coast Adventures 101 CSS by Mario Rodriguez */
+
+		/*-----Main CSS Configuration for Web Page-----*/
+	
+	/*---Begin Class and ID configurations---*/
+	
+/*Configures the company contact number to be used on mobile devices only*/
+#mobile { display: none;}
+/*Configures the company contact number for desktop only*/
+#desktop { display: inline; }	
+/*ID Configuration to center the content of the web page in the browser window
+  with a 5px shadow effect*/
+#container { 
+	background-color: #66a2d0; 
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	min-width: 700px;
+	max-width: 1024px;
+	box-shadow: 5px 5px 5px #030202;
+}
+/*Class configuration for the h1 element in the header.
+  this primarily hides the text in the h1 element, while making it 
+  available to be picked up by web bots*/
+.header { 
+	margin: 0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+/*Class configuration to display objects on the right side of the content area.
+  Currently used instead of the main img configuration*/
+.floatright	{
+	float: right; 
+	margin-top: 10px; 
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+/*Class to configure images to float on left*/
+.floatleft {
+	float: left;
+	margin-right: 10px;
+	margin-left: 15px;
+}
+/*Class to help configure the un-ordered list in the activities page*/
+.ullimargin {
+	margin-left: 20em;
+}
+
+/*Class to clear all floats*/
+.clear{ clear: both; }
+
+/*Class to create a logo for the Company name*/
+.adventure {
+	color: #070264;
+	font-size: 1.2em;
+}
+
+	/*---End Class and ID configurations---*/
+	/*---Begin Body, Header, h1 and h2 configurations---*/
+	
+/*Sets the header, nav, main and footer areas to block for older browsers*/
+header, nav, main, footer { display: block; }
+
+/*Configuration of the body of the web page. Background-color, text color and font-family*/
+body {
+	background-color: #2073b3;
+	color: #000000;
+	font-family: Verdana, Arial, sans-serif;
+}
+/*Configuration for the header element. Background-color, text color and font-family.
+  While configured it is not visible.*/ 
+header {
+	background-color: #ffffff;
+	color: #000000;
+	font-family: "Bauhaus 93", Arial, sans-serif;
+}
+/*Configuration for the h1 element. Background image, position, repetition, height, margin-bottowm
+  and line height*/
+h1 {
+	background-image: url(images/wca101.jpg);
+	background-position: left;
+	background-repeat: no-repeat;
+	height: 178px;
+	margin-bottom: 0;
+}
+/*Will configure h2 element.
+  still re-thinking the Bauhaus...*/
+h2{
+	font-family: Verdana, Ariel, sans-serif;
+}
+/*Configuration of the h3 elements, adds border to the bottom and top*/
+h3{
+	border-top: 1px solid #171E42;
+	border-bottom: 1px solid #171E42;
+	text-align: left;
+}
+/*Configuration for the dt element*/
+dt {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+/*Configureation for the dd element to create some space between services*/ 
+dd{
+	margin-bottom: 1em;
+}
+
+	/*---End Body, Header, h1 and h2 configurations---*/
+	/*---Navigation Elements Configuration---*/
+
+/*Configuration for the nav element. Set font-weight, and floats content to the left
+  and adds 150px of width*/
+nav {
+	font-weight: bold;
+	float: left;
+	width: 150px;
+}
+/*Configuration for the nav a element. Text-decoration, font-size, padding, display
+  and boarder-bottom*/
+nav a {
+	text-decoration: none;
+	font-size: 1em;
+	padding: 15px;
+	display: block;
+	border-bottom: 1px solid #071f03
+}
+/*Configuration for the nav ul element*/
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
+}
+/*Configuration for the nav a elemnt that sets the mouse hover, visited and link
+  attributes*/
+nav a:link{ color: #000000;}
+nav a:visited{ color: #344873; }
+nav a:hover{ 
+	color: #ffffff;
+	background-color: #0d2576;
+ }
+	/*---End Navigation Elements Configuration---*/
+	/*---Begin Main Element Content Configuration---*/
+		
+/*Configuration of the main element. Background-color, text color, font-size,
+  padding and overflow*/
+main{
+	background-color: #ffffff;
+	font-size: .95em;
+	padding-left: 170px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 20px;
+	padding-left: 20px;
+	color: #000000;
+	overflow: auto;
+}
+/*Configuration of the p element to add space between paragraphs*/
+p {
+	margin-bottom: 2em;
+}
+
+		/*---End Main Element Content Configuration---*/
+		/*---Begin Footer Configuration---*/
+		
+/*Configuration for the footer area. Background-color, margin, font-size, font-style,
+  text alignment and padding*/	
+footer{
+	background-color: #ffffff;
+	margin-left: 150px;
+	font-size: .70em;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+		/*---End Footer Configuration---*/
+
+              /*-----Begin Multi-View Port Device Configurations-----*/
+
+/*Configuration for media screens with a max width of 1024px.
+  These styles will be implemented when the screen falls below 1024px*/			  
+@media only screen and ( max-width: 1024px ) {
+	#container {
+		width: auto;
+		min-width: 0;
+		margin: 0;
+		box-shadow: none;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+		background-image: none;
+	}
+	h1 {
+		
+		background-image: url(images/wca101small.jpg);
+		height: 121px;
+		margin: 0;
+	}
+	.header{
+		height: 100px;
+	}
+	nav {
+		float: none;
+		width: auto;
+		padding: 0.5em;
+	}
+	nav li {
+		display: inline-block;
+	}
+	nav a {
+		padding: 1em;
+		border-bottom: none;
+	}
+	main {
+		padding: 1em;
+		margin-left: 0;
+		font-size: 90%;
+	}
+	footer {
+		margin: 0;
+	}
+}
+/*Configuration for media screens with a max width of 768px.
+  These styles will be implemented when the screen falls below 768px*/
+@media only all and ( max-width: 768px ) {
+	h1 { 
+	background-image: url(images/wca101mobile.jpg);
+	height: 100%;
+	font-size: 1.5em;
+	padding-left: 0.3em;
+	}
+	nav {
+	padding: 0;
+	}
+	nav a {
+	display: block;
+	padding: 0.2em;
+	font-size: 1.3em;
+	border-bottom: 1px solid #330000;
+	}
+	nav ul {
+	margin: 0;
+	padding: 0;
+	}
+	nav li {
+	display: block;
+	margin: 0;
+	padding: 0;
+	}
+	main {
+	padding-top: 0.1em;
+	padding-right: 0;
+	padding-bottom: 0.1em;
+	padding-left: 0.4em;
+	}
+	main img {
+	display: none;
+	padding-right: 0;
+	}
+	main ul {
+	list-style-position: outside;
+	}
+	.ullimargin {
+	margin-left: 0;
+	}
+	#mobile{display: inline;}
+	#desktop{display: none;}
+}		
+
+		/*-----End Multi-View Port Device Configurations-----*/
+		/*-----Configuration for the form control on reservations page-----*/
+		
+label {
+	float: left;
+	display: block;
+	width: 8em;
+	}
+input, label{
+	display: block;
+	
+	margin-bottom: 5px;
+	}
+fieldset {
+	width: 650px;
+	margin-bottom: 10px;
+	margin-left: 15px;
+	}
+#mySubmit {
+	margin-left: 23em;
+	margin-bottom: 15px;
+	}
+
+
+
+	
+
+
+		
